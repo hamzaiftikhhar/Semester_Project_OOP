@@ -50,7 +50,7 @@ public class HomeController {
         else if (event.getSource() == supplierBtn) {
             stage=(Stage) supplierBtn.getScene().getWindow();
             myNewScene = FXMLLoader.load(getClass().getResource("SupplierContact.fxml"));
-            System.out.println("Print");
+
 
         }
         else if (event.getSource() == logoutBtn) {
