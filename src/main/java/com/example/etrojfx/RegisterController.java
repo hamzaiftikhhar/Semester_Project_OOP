@@ -29,6 +29,7 @@ public class RegisterController {
 
     @FXML
     protected void signupAction(ActionEvent event) throws IOException {
+        System.out.println("Print");
         String userName = name.getText();
         String Password = pass.getText();
         String Cpass = cPass.getText();
