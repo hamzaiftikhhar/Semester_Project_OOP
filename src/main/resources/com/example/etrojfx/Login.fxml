@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane accessibleRole="CHECK_BOX" blendMode="DARKEN" depthTest="ENABLE" prefHeight="422.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etrojfx.Login">
+   <children>
+      <Text layoutX="356.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JOIN OUR MAILING LIST" textAlignment="CENTER" wrappingWidth="249.09375">
+         <font>
+            <Font name="Book Antiqua Bold" size="22.0" />
+         </font></Text>
+      <Button fx:id="Login" layoutX="529.0" layoutY="307.0" mnemonicParsing="false" onAction="#loginBtnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Login" textFill="WHITE" wrapText="true" />
+      <TextField fx:id="tfName" layoutX="337.0" layoutY="205.0" prefHeight="37.0" prefWidth="273.0" promptText="  Enter email here">
+         <effect>
+            <Blend />
+         </effect></TextField>
+      <PasswordField fx:id="pass" layoutX="337.0" layoutY="261.0" prefHeight="37.0" prefWidth="273.0" promptText="  Password" />
+      <Text boundsType="LOGICAL_VERTICAL_CENTER" layoutX="343.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                     Sign Up for exclusive         updates,new arrivals &amp; insider-only discounts" textOrigin="CENTER" wrappingWidth="289.33333333333326">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Text>
+      <Text layoutX="373.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="CreateNow" layoutX="344.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an ETRO account? ">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button fx:id="CreateNowBtn" layoutX="488.0" layoutY="339.0" mnemonicParsing="false" onAction="#CreateNowBtn" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: offwhite;" text="Create Now !" textFill="#0400ff" />
+      <ImageView fitHeight="407.0" fitWidth="273.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/gurls.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="75.0" layoutX="21.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/a1f49a16f6a76b841e1af73b62c1ceed.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
