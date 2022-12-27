@@ -2,7 +2,6 @@
 package com.example.etrojfx;
 
 import com.example.etrojfx.HelperFunctions.Helpers;
-import com.example.etrojfx.Models.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -104,6 +103,14 @@ public void AddInfo(){
     Scene scene = new Scene(grid,300,400);
     stage.setScene(scene);
     stage.show();
+    btn2.setOnAction(e ->{
+            userField.getText();
+            userField1.getText();
+            userField2.getText();
+
+
+            }
+    );
    // return userField;
 
 }
@@ -124,6 +131,7 @@ public void AddInfo(){
             stage = (Stage) homeBtn.getScene().getWindow();
             myNewScene = FXMLLoader.load(getClass().getResource("Home.fxml"));
             System.out.println("home");
+
         } else if (event.getSource() == warehouseBtn){
             stage = (Stage) warehouseBtn.getScene().getWindow();
             myNewScene = FXMLLoader.load(getClass().getResource("Warehouse.fxml"));
@@ -191,18 +199,24 @@ public void AddInfo(){
         table.setItems(ProductModel);
     }
 
-    public void EditInfo(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
+    public void editableView(){
+        Product editProduct = table.getSelectionModel().getSelectedItem();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Delete.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load());
-        Image image =new Image("H:\\Second Semester\\OOP\\Etrojfx-master\\src\\main\\resources\\com\\example\\pic\\loooosisnovjNV.jpg");
-        stage.getIcons().add(image);
-        stage.setTitle("ETRO Clothing");
-        stage.setScene(scene);
-        stage.show();
+    }
 
+//    public void EditInfo(ActionEvent actionEvent) throws IOException {
+////        Stage stage = new Stage();
+////
+////        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Delete.fxml"));
+////
+////        Scene scene = new Scene(fxmlLoader.load());
+////        Image image =new Image("H:\\Second Semester\\OOP\\Etrojfx-master\\src\\main\\resources\\com\\example\\pic\\loooosisnovjNV.jpg");
+////        stage.getIcons().add(image);
+////        stage.setTitle("ETRO Clothing");
+////        stage.setScene(scene);
+////        stage.show();
+//
 //        Stage stage = new Stage();
 //        GridPane grid = new GridPane();
 //        grid.setPadding(new Insets(30));
@@ -229,15 +243,19 @@ public void AddInfo(){
 //        grid.add(userField, 1,2);
 //        Button btn2 = new Button("Delete");
 //        grid.add(btn2,1,3);
+//        String deleteField = null;
+//        btn2.setOnAction(e->   userField.getText()
+//        );
 //
 //        Scene scene = new Scene(grid,300,400);
 //        stage.setScene(scene);
 //        stage.show();
-       // int selectedId = table.getVisibleLeafIndex(Product);
+//  //      int selectedId = table.getVisibleLeafIndex(Product);
+//
+//
+//
+//    }
 
-
-
-    }
 
     public void deleteItem(ActionEvent actionEvent) {
 

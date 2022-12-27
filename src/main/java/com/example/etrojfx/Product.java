@@ -3,77 +3,72 @@ package com.example.etrojfx;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Product {
-    private SimpleStringProperty ItemNo;
-    private SimpleStringProperty Manufacturer;
+public class Product implements Serializable {
+    private String ItemNo;
+    private String Manufacturer;
+    private Double Size;
+    private Double CostPerItem;
+    private Double StockQty;
+    private Double InventryValue;
 
-    private SimpleDoubleProperty Size;
-    private SimpleDoubleProperty CostPerItem;
-    private SimpleDoubleProperty StockQty;
-    private SimpleDoubleProperty InventryValue;
-
-    public Product(String itemNo, String manufacturer, double size, double costPerItem, double stockQty, double inventryValue) {
-        ItemNo = new SimpleStringProperty(itemNo);
-        Manufacturer =new SimpleStringProperty(manufacturer);
-        Size = new SimpleDoubleProperty(size);
-        CostPerItem = new SimpleDoubleProperty(costPerItem);
-        StockQty = new SimpleDoubleProperty(stockQty);
-        InventryValue = new SimpleDoubleProperty(inventryValue);
+    public Product(String itemNo, String manufacturer, Double size, Double costPerItem, Double stockQty, Double inventryValue) {
+        ItemNo = itemNo;
+        Manufacturer = manufacturer;
+        Size = size;
+        CostPerItem = costPerItem;
+        StockQty = stockQty;
+        InventryValue = inventryValue;
     }
 
     public String getItemNo() {
-        return ItemNo.get();
+        return ItemNo;
     }
 
-
     public void setItemNo(String itemNo) {
-        this.ItemNo.set(itemNo);
+        ItemNo = itemNo;
     }
 
     public String getManufacturer() {
-        return Manufacturer.get();
+        return Manufacturer;
     }
-
-
 
     public void setManufacturer(String manufacturer) {
-        this.Manufacturer.set(manufacturer);
+        Manufacturer = manufacturer;
     }
 
-    public double getSize() {
-        return Size.get();
+    public Double getSize() {
+        return Size;
     }
 
-    public void setSize(double size) {
-        this.Size.set(size);
+    public void setSize(Double size) {
+        Size = size;
     }
 
-    public double getCostPerItem() {
-        return CostPerItem.get();
+    public Double getCostPerItem() {
+        return CostPerItem;
     }
 
-
-    public void setCostPerItem(double costPerItem) {
-        this.CostPerItem.set(costPerItem);
+    public void setCostPerItem(Double costPerItem) {
+        CostPerItem = costPerItem;
     }
 
-    public double getStockQty() {
-        return StockQty.get();
+    public Double getStockQty() {
+        return StockQty;
     }
 
-
-    public void setStockQty(double stockQty) {
-        this.StockQty.set(stockQty);
+    public void setStockQty(Double stockQty) {
+        StockQty = stockQty;
     }
 
-    public double getInventryValue() {
-        return InventryValue.get();
+    public Double getInventryValue() {
+        return InventryValue;
     }
 
-    public void setInventryValue(double inventryValue) {
-        this.InventryValue.set(inventryValue);
+    public void setInventryValue(Double inventryValue) {
+        InventryValue = inventryValue;
     }
 }

@@ -1,8 +1,6 @@
 package com.example.etrojfx;
 
-import com.example.etrojfx.Globals.Global;
 import com.example.etrojfx.HelperFunctions.Helpers;
-import com.example.etrojfx.Models.Product;
 import com.example.etrojfx.Models.SalesOrder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
